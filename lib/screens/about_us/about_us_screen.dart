@@ -4,11 +4,11 @@ import 'package:writegpt_website/screens/about_us/widget/aboutus_description_wid
 import 'package:writegpt_website/screens/about_us/widget/harness_gpt_widget.dart';
 import 'package:writegpt_website/utils/asset_utils.dart';
 import 'package:writegpt_website/widgets/app_button_widget.dart';
-import 'package:writegpt_website/widgets/bootstrap_container_widget.dart';
-import 'package:writegpt_website/widgets/custom_flutter_bootstrap.dart';
 import 'package:writegpt_website/widgets/scaffold_body_widget.dart';
+import 'package:writegpt_website/widgets/text/link_text.dart';
 import 'package:writegpt_website/widgets/text/text_styles.dart';
 import 'package:writegpt_website/widgets/text/text_widget.dart';
+import 'dart:js' as js;
 
 class AboutUsScreen extends StatefulWidget {
   const AboutUsScreen({super.key});
@@ -111,6 +111,42 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: 80),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                AssetUtils.getPngImage('facebook'),
+                height: 40,
+              ),
+              const SizedBox(width: 20),
+              Image.asset(
+                AssetUtils.getPngImage('twitter'),
+                height: 40,
+              ),
+              const SizedBox(width: 20),
+              Image.asset(
+                AssetUtils.getPngImage('linkedin'),
+                height: 40,
+              ),
+            ],
+          ),
+          const SizedBox(height: 35),
+          SizedBox(
+            width: 674,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const[
+                LinkText(text: 'Contact'),
+                Padding(
+                  padding: EdgeInsets.only(left: 40),
+                  child: LinkText(text: 'Ask for a feature'),
+                ),
+                LinkText(text: 'Report a bug'),
+              ],
+            ),
           ),
           const SizedBox(height: 30),
         ],
