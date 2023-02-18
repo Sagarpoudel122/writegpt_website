@@ -27,7 +27,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
             height: 140,
           ),
           Center(
-            child: SizedBox(
+            child: Container(
               width: 650,
               child: Column(
                 children: [
@@ -45,28 +45,10 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      AppButtonWidget(
-                        title: 'Add to Chrome',
-                        onPressed: () {},
-                        appButtonType: AppButtonType.primary,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 5.0,
-                        ),
-                        child: AppButtonWidget(
-                          title: 'Open Extension',
-                          onPressed: () {
-                            js.context.callMethod("triggerHotkey");
-                          },
-                          appButtonType: AppButtonType.primaryOutlineBorder,
-                        ),
-                      )
-                    ],
+                  AppButtonWidget(
+                    title: 'Add to Chrome',
+                    onPressed: () {},
+                    appButtonType: AppButtonType.primary,
                   ),
                 ],
               ),

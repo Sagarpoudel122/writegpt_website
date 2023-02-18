@@ -46,15 +46,20 @@ class _NavLinkState extends State<NavLink> {
     bool isSelected = isActive();
     return Padding(
       padding: EdgeInsets.only(bottom: widget.isMobileView ? 15 : 5.0),
-      child: TextButton(
-        onPressed: () {
+      child: InkWell(
+        hoverColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        onTap: () {
           if (widget.onTap != null) {
             widget.onTap!();
           } else {
+            Navigator.of(context).pushReplacementNamed(widget.navLink);
             // context.go(widget.navLink);
           }
         },
-        style: const ButtonStyle(),
+        // style: const ButtonStyle(),
         child: TextWidget(
           widget.navText,
           textDecoration: widget.isUnderLine

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:writegpt_website/utils/app_colors.dart';
+import 'package:writegpt_website/utils/app_constant.dart';
 import 'package:writegpt_website/utils/asset_utils.dart';
 import 'package:writegpt_website/widgets/navlink.dart';
 
@@ -13,47 +14,50 @@ class AppbarWidget extends StatefulWidget {
 class _AppbarWidgetState extends State<AppbarWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 64,
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: AppColors.appbarBorderBottom),
+    return Center(
+      child: Container(
+        height: 64,
+        width: AppConstant.maxAppWidth,
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: AppColors.appbarBorderBottom),
+          ),
         ),
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10.0),
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 50.0),
-            child: Image.asset(
-              AssetUtils.getPngImage('logo'),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10.0),
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 50.0),
+              child: Image.asset(
+                AssetUtils.getPngImage('logo'),
+              ),
             ),
-          ),
-          Spacer(),
-          Container(
-            width: 400,
-            // color: Colors.red,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                NavLink(
-                  navLink: '',
-                  navText: 'About Us',
-                ),
-                NavLink(
-                  navLink: '',
-                  navText: 'OnBoarding',
-                ),
-                NavLink(
-                  navLink: '',
-                  navText: 'Blog',
-                ),
-              ],
+            Spacer(),
+            Container(
+              width: 400,
+              // color: Colors.red,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  NavLink(
+                    navLink: '',
+                    navText: 'About Us',
+                  ),
+                  NavLink(
+                    navLink: '/onboarding',
+                    navText: 'OnBoarding',
+                  ),
+                  NavLink(
+                    navLink: '',
+                    navText: 'Blog',
+                  ),
+                ],
+              ),
             ),
-          ),
-          Spacer(),
-        ],
+            Spacer(),
+          ],
+        ),
       ),
     );
     return AppBar(
