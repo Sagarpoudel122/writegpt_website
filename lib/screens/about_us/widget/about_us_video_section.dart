@@ -35,7 +35,7 @@ class _AboutUsVideoSectionWidgetState extends State<AboutUsVideoSectionWidget> {
           CustomBootstrapRow(
             children: [
               CustomBootstrapCol(
-                sizes: 'col-12 col-sm-12 col-md-12 col-lg-6',
+                sizes: 'col-6 col-sm-6 col-md-6 col-lg-6',
                 child: widget.isVideoFirst
                     ? VideoSectionWidget(
                         videoUrl: widget.videoUrl,
@@ -47,7 +47,7 @@ class _AboutUsVideoSectionWidgetState extends State<AboutUsVideoSectionWidget> {
                       ),
               ),
               CustomBootstrapCol(
-                sizes: 'col-12 col-12 col-sm-12 col-md-12 col-lg-6',
+                sizes: 'col-6 col-sm-6 col-md-6 col-lg-6',
                 child: !widget.isVideoFirst
                     ? VideoSectionWidget(
                         videoUrl: widget.videoUrl,

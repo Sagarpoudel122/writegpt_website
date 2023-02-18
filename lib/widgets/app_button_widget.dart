@@ -56,7 +56,8 @@ class AppButtonWidget extends StatelessWidget {
             elevation: 0,
             height: height,
             focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
+            hoverColor: backgroundColor ?? _getBackgroundColor(),
+
             // hoverColor: appButtonType==AppButtonType.primaryOutlineBorder?,
             onPressed: enabled ? (loading ? () {} : onPressed) : () {},
             child: Padding(

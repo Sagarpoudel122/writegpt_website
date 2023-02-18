@@ -310,6 +310,11 @@ class TextWidget extends StatelessWidget {
         textColor ??= AppColors.textPrimaryColor;
         fontWeight = FontWeight.w400;
         break;
+      case CustomTextStyles.text22_500:
+        fontSize = 22;
+        textColor ??= AppColors.textPrimaryColor;
+        fontWeight = FontWeight.w500;
+        break;
 
       case CustomTextStyles.text22_700:
         fontSize = 22;
@@ -349,10 +354,15 @@ class TextWidget extends StatelessWidget {
         fontStyle = FontStyle.italic;
         break;
 
-      case CustomTextStyles.text24_600:
+      case CustomTextStyles.text24_500:
         fontSize = 24.0;
         textColor ??= AppColors.textPrimaryColor;
         fontWeight = FontWeight.w500;
+        break;
+      case CustomTextStyles.text24_600:
+        fontSize = 24.0;
+        textColor ??= AppColors.textPrimaryColor;
+        fontWeight = FontWeight.w600;
         break;
 
       case CustomTextStyles.text24_700:
@@ -383,6 +393,11 @@ class TextWidget extends StatelessWidget {
         fontSize = 25.0;
         textColor ??= AppColors.textPrimaryColor;
         fontWeight = FontWeight.w700;
+        break;
+      case CustomTextStyles.text28_400:
+        fontSize = 28.0;
+        textColor ??= AppColors.textPrimaryColor;
+        fontWeight = FontWeight.w400;
         break;
 
       case CustomTextStyles.text30_300:
@@ -457,6 +472,12 @@ class TextWidget extends StatelessWidget {
         fontSize = 60;
         textColor ??= AppColors.textPrimaryColor;
         fontWeight = FontWeight.w700;
+        break;
+
+      case CustomTextStyles.text64_500:
+        fontSize = 60;
+        textColor ??= AppColors.textPrimaryColor;
+        fontWeight = FontWeight.w500;
         break;
 
       case CustomTextStyles.smallGreyDescription_customLineHeight:

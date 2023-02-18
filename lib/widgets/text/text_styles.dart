@@ -50,6 +50,7 @@ enum CustomTextStyles {
   text20_700,
   text22_300,
   text22_400,
+  text22_500,
   text22_700,
   text22_700_nunitoSans,
   text22_700_secondary,
@@ -57,11 +58,14 @@ enum CustomTextStyles {
   text24_400,
   text24_400_italic,
   text24_500,
+
   text24_600,
   text24_700,
   text24_800,
+
   text25_500,
   text25_700,
+  text28_400,
   text30_300,
   text30_400_formLabel,
   text30_700,
@@ -74,6 +78,7 @@ enum CustomTextStyles {
   text48_700,
   text48_800,
   text60_700,
+  text64_500,
   bigLineHeightGreyDescription,
   smallGreyDescription_customLineHeight,
 }
