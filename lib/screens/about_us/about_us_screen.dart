@@ -5,6 +5,7 @@ import 'package:writegpt_website/screens/about_us/widget/harness_gpt_widget.dart
 import 'package:writegpt_website/utils/asset_utils.dart';
 import 'package:writegpt_website/widgets/app_button_widget.dart';
 import 'package:writegpt_website/widgets/scaffold_body_widget.dart';
+import 'package:writegpt_website/widgets/social_media_widget.dart';
 import 'package:writegpt_website/widgets/text/link_text.dart';
 import 'package:writegpt_website/widgets/text/text_styles.dart';
 import 'package:writegpt_website/widgets/text/text_widget.dart';
@@ -27,7 +28,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
             height: 140,
           ),
           Center(
-            child: Container(
+            child: SizedBox(
               width: 650,
               child: Column(
                 children: [
@@ -113,32 +114,13 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
             ],
           ),
           const SizedBox(height: 80),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset(
-                AssetUtils.getPngImage('facebook'),
-                height: 40,
-              ),
-              const SizedBox(width: 20),
-              Image.asset(
-                AssetUtils.getPngImage('twitter'),
-                height: 40,
-              ),
-              const SizedBox(width: 20),
-              Image.asset(
-                AssetUtils.getPngImage('linkedin'),
-                height: 40,
-              ),
-            ],
-          ),
+          SocialMediaWidget(),
           const SizedBox(height: 35),
           SizedBox(
             width: 674,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const[
+              children: const [
                 LinkText(text: 'Contact'),
                 Padding(
                   padding: EdgeInsets.only(left: 40),

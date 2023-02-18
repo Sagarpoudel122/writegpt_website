@@ -9,6 +9,7 @@ import 'package:writegpt_website/utils/asset_utils.dart';
 import 'package:writegpt_website/utils/extension_utils.dart';
 import 'package:writegpt_website/widgets/app_button_widget.dart';
 import 'package:writegpt_website/widgets/scaffold_body_widget.dart';
+import 'package:writegpt_website/widgets/social_media_widget.dart';
 import 'package:writegpt_website/widgets/text/text_styles.dart';
 import 'package:writegpt_website/widgets/text/text_widget.dart';
 import 'package:writegpt_website/widgets/text/transaparent_inkwell_widget.dart';
@@ -140,7 +141,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 70),
           TransparentInkwellWidget(
             onTap: () {},
             child: TextWidget(
@@ -151,6 +152,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
           ),
           const SizedBox(height: 50),
+          const SocialMediaWidget(),
+          const SizedBox(height: 40),
         ],
       ),
     );
