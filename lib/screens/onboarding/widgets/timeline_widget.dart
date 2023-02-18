@@ -16,7 +16,7 @@ class TimelineWidget extends StatelessWidget {
       AppColors.timelineColor2,
       AppColors.timelineColor3,
       AppColors.timelineColor1,
-      AppColors.timelineColor1,
+      AppColors.timelineColor5,
     ];
     return Container(
       height: 530,
@@ -35,6 +35,7 @@ class TimelineWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: timelineColor[index],
+                    width: 1.5,
                   ),
                   borderRadius: BorderRadius.circular(30),
                 ),

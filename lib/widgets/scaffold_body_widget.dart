@@ -18,6 +18,62 @@ class ScaffoldBodyWidget extends StatefulWidget {
 }
 
 class _ScaffoldBodyWidgetState extends State<ScaffoldBodyWidget> {
+  Widget floatingAppbar() {
+    return Column(
+      children: [
+        // Stack(
+        //   children: [
+        //     Align(
+        //       alignment: Alignment.topCenter,
+        //       child: Container(
+        //         constraints: const BoxConstraints(maxHeight: 900),
+        //         width: AppConstant.maxAppWidth,
+        //         child: Image.asset(
+        //           AssetUtils.getPngImage('colored_bg'),
+        //           fit: BoxFit.fitWidth,
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+
+        AppbarWidget(),
+        Expanded(
+          child: SingleChildScrollView(
+            child: widget.child,
+          ),
+        )
+      ],
+    );
+  }
+
+  Widget nonFloatingAppbar() {
+    return ListView(
+      children: [
+        Stack(
+          children: [
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                constraints: const BoxConstraints(maxHeight: 900),
+                width: AppConstant.maxAppWidth,
+                child: Image.asset(
+                  AssetUtils.getPngImage('colored_bg'),
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            const AppbarWidget(),
+            Padding(
+              padding: const EdgeInsets.only(top: 64.0),
+              child: widget.child,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,30 +82,7 @@ class _ScaffoldBodyWidgetState extends State<ScaffoldBodyWidget> {
         child: Center(
           child: Container(
             height: MediaQuery.of(context).size.height,
-            child: ListView(
-              children: [
-                Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                        constraints: const BoxConstraints(maxHeight: 900),
-                        width: AppConstant.maxAppWidth,
-                        child: Image.asset(
-                          AssetUtils.getPngImage('colored_bg'),
-                          fit: BoxFit.fitWidth,
-                        ),
-                      ),
-                    ),
-                    const AppbarWidget(),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 64.0),
-                      child: widget.child,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            child: nonFloatingAppbar(),
           ),
         ),
       ),

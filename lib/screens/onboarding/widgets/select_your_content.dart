@@ -11,9 +11,9 @@ class SelectYourContentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350,
+      height: 390,
       width: 500,
-      margin: EdgeInsets.only(top: 30),
+      margin: EdgeInsets.only(top: 20),
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       decoration: BoxDecoration(
         border: Border.all(

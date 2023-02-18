@@ -14,5 +14,5 @@ class AppColors {
   static Color timelineColor1 = Color(0xFF0EDF7B);
   static Color timelineColor2 = Color(0xFFEB0790);
   static Color timelineColor3 = Color(0xFFF4A733);
-  // static Color timelineColor4 = Color(0xFF0EDF7B);
+  static Color timelineColor5 = Color(0xFF259FD3);
 }

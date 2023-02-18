@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:writegpt_website/screens/about_us/about_us_screen.dart';
 import 'package:writegpt_website/screens/onboarding/onboarding_screen.dart';
+import 'package:writegpt_website/utils/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'WriteGPT',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        scrollbarTheme: ScrollbarThemeData().copyWith(
+          thickness: MaterialStateProperty.all<double>(6),
+          thumbColor: MaterialStateProperty.all<Color>(
+            AppColors.buttonPrimaryColor,
+          ),
+        ),
+        primarySwatch: Colors.yellow,
+      ),
       routes: {
         '': (context) => const AboutUsScreen(),
         '/onboarding': (context) => const OnBoardingScreen(),

@@ -97,6 +97,12 @@ flutter:
           - asset: assets/fonts/inter/Inter-Black.ttf
             weight: 800
 
+
+      - family: HelveticaNeue
+        fonts:
+          - asset: assets/fonts/helveticaNeue/HelveticaNeueMed.ttf
+            weight: 500
+     
       - family: Lato
         fonts:
           - asset: assets/fonts/lato/Lato-Regular.ttf

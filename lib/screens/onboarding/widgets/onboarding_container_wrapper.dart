@@ -36,6 +36,7 @@ class OnboardingContainerWrapper extends StatelessWidget {
                 title,
                 style: CustomTextStyles.text24_500,
                 textAlign: TextAlign.center,
+                fontFamily: fontHelveticaNeue,
               ),
             ),
             const SizedBox(

@@ -4,6 +4,7 @@ import 'package:writegpt_website/widgets/text/text_styles.dart';
 
 const fontInter = 'Inter';
 const fontLato = 'Lato';
+const fontHelveticaNeue = 'HelveticaNeue';
 
 class TextWidget extends StatelessWidget {
   TextWidget(

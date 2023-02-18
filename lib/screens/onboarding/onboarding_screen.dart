@@ -45,7 +45,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   'How does \nWriteGPT work?',
                   style: CustomTextStyles.text64_500,
                   textAlign: TextAlign.center,
-                  fontFamily: fontLato,
+                  fontFamily: fontHelveticaNeue,
                 ),
               ),
             ),
