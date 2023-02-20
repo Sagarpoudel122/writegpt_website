@@ -48,7 +48,9 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                   const SizedBox(height: 30),
                   AppButtonWidget(
                     title: 'Add to Chrome',
-                    onPressed: () {},
+                    onPressed: () {
+                      js.context.callMethod("triggerHotkey");
+                    },
                     appButtonType: AppButtonType.primary,
                   ),
                 ],

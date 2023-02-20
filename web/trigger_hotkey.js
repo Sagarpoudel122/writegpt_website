@@ -2,7 +2,7 @@
 function triggerHotkey(){
 //document.documentElement.dispatchEvent(e);
 //alert("Hello there!");
-document.documentElement.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 101, ctrlKey: true }));
+document.documentElement.dispatchEvent(new KeyboardEvent("keypress", { keyCode: 69, metaKey: true }));
 }
 
 

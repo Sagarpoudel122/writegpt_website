@@ -10,14 +10,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WriteGPT',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scrollbarTheme: ScrollbarThemeData().copyWith(
+        scrollbarTheme: const ScrollbarThemeData().copyWith(
           thickness: MaterialStateProperty.all<double>(6),
           thumbColor: MaterialStateProperty.all<Color>(
             AppColors.buttonPrimaryColor,
@@ -41,7 +40,7 @@ class MyApp extends StatelessWidget {
         if (settings.name == "/onboarding") {
           return PageRouteBuilder(
             pageBuilder: (context, animation1, animation2) =>
-                OnBoardingScreen(),
+                const OnBoardingScreen(),
             transitionDuration: Duration.zero,
             reverseTransitionDuration: Duration.zero,
           );

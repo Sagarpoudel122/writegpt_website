@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:writegpt_website/utils/app_colors.dart';
 import 'package:writegpt_website/utils/app_constant.dart';
@@ -12,6 +15,21 @@ class AppbarWidget extends StatefulWidget {
 }
 
 class _AppbarWidgetState extends State<AppbarWidget> {
+  final String registryName = 'productHuntImage';
+
+  @override
+  void initState() {
+    ///register widget for [HtmlElementView]
+    // ignore:undefined_prefixed_name
+    ui.platformViewRegistry.registerViewFactory(
+      registryName,
+      (int viewId) => IFrameElement()
+        ..srcdoc = AppConstant.productHuntEmbedElement
+        ..style.border = 'none',
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -32,10 +50,9 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                 AssetUtils.getPngImage('logo'),
               ),
             ),
-            Spacer(),
-            Container(
+            const Spacer(),
+            SizedBox(
               width: 400,
-              // color: Colors.red,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,18 +72,29 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
+
+            ///Product hunt button
+            Padding(
+              padding: const EdgeInsets.only(right: 50.0),
+              child: SizedBox(
+                height: 80,
+                width: 250,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: -6,
+                      child: SizedBox(
+                        height: 80,
+                        width: 250,
+                        child: HtmlElementView(viewType: registryName),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
-        ),
-      ),
-    );
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      toolbarHeight: 50,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: Image.asset(
-          AssetUtils.getPngImage('logo'),
         ),
       ),
     );

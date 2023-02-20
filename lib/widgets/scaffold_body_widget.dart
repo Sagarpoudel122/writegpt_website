@@ -37,7 +37,7 @@ class _ScaffoldBodyWidgetState extends State<ScaffoldBodyWidget> {
         //   ],
         // ),
 
-        AppbarWidget(),
+        const AppbarWidget(),
         Expanded(
           child: SingleChildScrollView(
             child: widget.child,
