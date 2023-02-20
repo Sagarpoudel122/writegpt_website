@@ -52,7 +52,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
             ),
             const Spacer(),
             SizedBox(
-              width: 400,
+              width: 300,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,10 +64,6 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   NavLink(
                     navLink: '/onboarding',
                     navText: 'OnBoarding',
-                  ),
-                  NavLink(
-                    navLink: '',
-                    navText: 'Blog',
                   ),
                 ],
               ),

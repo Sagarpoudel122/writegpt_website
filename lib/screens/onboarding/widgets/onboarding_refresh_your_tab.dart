@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:writegpt_website/screens/onboarding/widgets/onboarding_key_container.dart';
 import 'package:writegpt_website/utils/app_colors.dart';
+import 'package:writegpt_website/utils/app_constant.dart';
 import 'package:writegpt_website/widgets/text/text_styles.dart';
 import 'package:writegpt_website/widgets/text/text_widget.dart';
+import 'dart:html' as html;
 
 class OnboardingRefreshYourTabWidget extends StatelessWidget {
   const OnboardingRefreshYourTabWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    print(html.window.navigator.platform);
     Widget icon = Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Icon(
@@ -27,8 +30,8 @@ class OnboardingRefreshYourTabWidget extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const OnBoardingkeyContainer(
-                text: '⌘',
+              OnBoardingkeyContainer(
+                text: AppConstant.getOS(),
                 customTextStyles: CustomTextStyles.text22_700,
               ),
               icon,

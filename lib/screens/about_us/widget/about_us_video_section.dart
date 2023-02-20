@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:writegpt_website/utils/app_colors.dart';
+import 'package:writegpt_website/utils/asset_utils.dart';
 import 'package:writegpt_website/widgets/bootstrap_container_widget.dart';
 import 'package:writegpt_website/widgets/custom_flutter_bootstrap.dart';
 import 'package:writegpt_website/widgets/text/text_styles.dart';
@@ -119,8 +120,12 @@ class VideoSectionWidget extends StatelessWidget {
         height: 370,
         width: 550,
         decoration: BoxDecoration(
-          color: AppColors.videoBgColor,
+          // color: AppColors.videoBgColor,
           borderRadius: BorderRadius.circular(10),
+        ),
+        child: Image.network(
+          videoUrl,
+          fit: BoxFit.fitWidth,
         ),
       ),
     );

@@ -63,13 +63,15 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
           const AboutUsVideoSectionWidget(
             mainAxisAlignment: MainAxisAlignment.start,
             title: 'Harness GPT for vast use-cases on any website',
-            videoUrl: '',
+            videoUrl:
+                'https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.25.04.png?alt=media&token=12cf8f2e-ff1c-41e6-a55c-eec886522465',
             child: HarnessGptDescriptionWidget(),
           ),
           const AboutUsVideoSectionWidget(
             isVideoFirst: true,
             title: 'Assisted prompt writing',
-            videoUrl: '',
+            videoUrl:
+                'https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.26.07.png?alt=media&token=69ec05d2-6232-4aa0-b80b-c9e59714674c',
             child: AboutUsDescriptionWidget(
               text1:
                   'Bridge your needs, context, goals, product, audience, style (and many more) with the power of writeGPT. \n',
@@ -79,7 +81,8 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
           ),
           const AboutUsVideoSectionWidget(
             title: 'Break unproductive browsing habits',
-            videoUrl: '',
+            videoUrl:
+                'https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.27.30.png?alt=media&token=74f70274-585b-4720-b66a-204536233eb0',
             child: AboutUsDescriptionWidget(
               text1:
                   'Internet browsing is grounded with bad design where users have to constantly interchange tabs or check multiple websites to find a simple answer.\n ',
