@@ -34,7 +34,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
             ),
             Spacer(),
             Container(
-              width: 400,
+              width: 300,
               // color: Colors.red,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -47,10 +47,6 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   NavLink(
                     navLink: '/onboarding',
                     navText: 'OnBoarding',
-                  ),
-                  NavLink(
-                    navLink: '',
-                    navText: 'Blog',
                   ),
                 ],
               ),

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         '': (context) => const AboutUsScreen(),
         '/onboarding': (context) => const OnBoardingScreen(),
       },
-      initialRoute: '/onboarding',
+      initialRoute: '',
       onGenerateRoute: (settings) {
         if (settings.name == "") {
           return PageRouteBuilder(
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         // Unknown route
         return MaterialPageRoute(builder: (_) => Container());
       },
-      home: const OnBoardingScreen(),
+      // home: const OnBoardingScreen(),
     );
   }
 }
