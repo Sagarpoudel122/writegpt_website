@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "writegpt-9cc05"
+  },
+  "targets": {
+    "writegpt-9cc05": {
+      "hosting": {
+        "website": [
+          "writegpt-9cc05"
+        ]
+      }
+    }
+  }
+}
