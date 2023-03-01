@@ -1,92 +1,91 @@
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 100%;
-    width: 0;
-    position: fixed;
-    /* Stay in place */
-    z-index: 2;
-    /* Sit on top */
-    left: 0;
-    top: 0;
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
 
-    background-color:var(--bodyBgColor);;
-    opacity: 0.9;
-    /* Black w/opacity */
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  background-color: rgba(12, 1, 43, 0.9);
+  /* opacity: 0.9; */
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 /* Position the content inside the overlay */
 .overlay-content {
-    position: relative;
-    top: 15%;
-    /* 25% from the top */
-    width: 100%;
-    /* 100% width */
-    text-align: center;
-    /* Centered text/links */
-    margin-top: 30px;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */
+  width: 100%;
+  padding: 80px 50px 10px;
+  height: 100%;
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 33px;
-    color: white;
-    font-weight: 600;
-    display: block;
-    /* Display block instead of inline */
-    transition: 0.3s;
-    /* Transition effects on hover (color) */
+  text-decoration: none;
+
+  color: white;
+  font-weight: 600;
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+.overlay ul {
+  list-style: none;
+}
+.overlay li a {
+  color: var(--textPrimary);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Space Grotesk";
+  padding: 15px 0px;
 }
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover,
 .overlay a:focus {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
-    position: absolute;
-   
+  position: absolute;
+  left: 2rem;
+  top: 10px;
 }
 
-.hambuger{
-    height: 45px;
-    width: 45px;
-    background-color: var(--bodyBgColor);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
+.hambuger {
+  height: 45px;
+  width: 45px;
+  background-color: var(--bodyBgColor);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
 }
-.hambuger.open span{
-    height: 2.5px;
-    border-radius: 2px;
-    width: 100%;
-    background-color: white;
-    display: block;
+.hambuger.open span {
+  height: 2.5px;
+  border-radius: 2px;
+  width: 100%;
+  background-color: white;
+  display: block;
 }
-.overlay .closebtn a{
-    font-size: 40px;
+.overlay .closebtn a {
+  font-size: 40px;
 }
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px;
-        font-family: 'Space Grotesk';
-    }
-
-    .overlay .closebtn {
-        font-size: 40px;
-        top: -2px;
-        left:  50px;
-    }
+  .overlay a {
+    font-size: 20px;
+    font-family: "Space Grotesk";
+  }
 }

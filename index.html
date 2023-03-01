@@ -45,15 +45,23 @@
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inter"
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,700"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato"
+      href="https://fonts.googleapis.com/css?family=Lato:400"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Space Grotesk:400,600,700"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Space Grotesk"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>writeGPT - OpenAI's GPT prompt assistant</title>
   </head>
@@ -61,58 +69,70 @@
     <div id="header-color"></div>
 
     <div id="header-spacing"></div>
-    <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
-      <div class="hambuger closebtn">
-        <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-      </div>
 
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <ul class="navbar-nav">
-          <li><a href="https://writegpt.ai/">Product</a></li>
-          <li><a href="./onboarding.html">OnBoarding</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </div>
-    </div>
     <section id="content">
-      <div id="header-middle-color"></div>
+      <div id="header-middle-color" class="d-none d-md-block"></div>
       <!-- Navbar Start -->
-      <div>
-        <nav class="header-nav">
-          <div>
-            <a
-              href="javascript:void(0)"
-              class="d-block d-md-none"
-              onclick="openNav()"
-            >
-              <div class="hambuger open">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
-            </a>
-            <a href="https://writegpt.ai/" class="d-none d-md-block">
-              <img src="./assets/images/logo.png" alt="Logo" class="logo" />
-            </a>
-          </div>
+      <nav class="header-nav">
+        <div>
+          <a
+            href="javascript:void(0)"
+            class="d-block d-md-none"
+            onclick="openNav()"
+          >
+            <div class="hambuger open">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
+          </a>
+          <a href="https://writegpt.ai/" class="d-none d-md-block">
+            <img src="./assets/images/logo.png" alt="Logo" class="logo" />
+          </a>
+        </div>
 
-          <div class="nav-wrapper d-none d-md-block">
-            <ul class="navbar">
-              <li><a href="https://writegpt.ai/">Product</a></li>
-              <li><a href="./onboarding.html">OnBoarding</a></li>
-              <li><a href="">Blog</a></li>
-            </ul>
+        <div class="nav-wrapper d-none d-md-block">
+          <ul class="navbar">
+            <li><a href="https://writegpt.ai/">Product</a></li>
+            <li><a href="./onboarding.html">OnBoarding</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <a href="https://www.producthunt.com/posts/writegpt" target="_blank"
+          ><img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=378697&theme=light"
+            alt="writeGPT - Become Superhuman with everyday tasks by harnessing ChatGPT | Product Hunt"
+            style="width: 210px; height: 54px"
+        /></a>
+      </nav>
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <div class="hambuger closebtn">
+          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+        </div>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <ul class="navbar-nav">
+            <li><a href="https://writegpt.ai/">Product</a></li>
+            <li><a href="./onboarding.html">OnBoarding</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+          <div class="social-icon-wrapper">
+            <a target="_blank" href="https://www.instagram.com/writegpt.ai/"
+              ><img src="./assets/images/instagram.png"
+            /></a>
+            <a target="_blank" href="https://twitter.com/write_GPT"
+              ><img src="./assets/images/twitter.png"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/writegptai/"
+              ><img src="./assets/images/linkedIn.png"
+            /></a>
           </div>
-          <a href="https://www.producthunt.com/posts/writegpt" target="_blank"
-            ><img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=378697&theme=light"
-              alt="writeGPT - Become Superhuman with everyday tasks by harnessing ChatGPT | Product Hunt"
-              style="width: 210px; height: 54px"
-          /></a>
-        </nav>
+        </div>
       </div>
       <!-- Navbar End -->
       <center>
@@ -143,7 +163,7 @@
                 >
                   Add to Chrome
                 </button>
-                <button onclick="openChromeExtension()">Try it Out</button>
+                <button onclick="openTryOut()">Try it Out</button>
               </div>
             </div>
             <img
@@ -153,6 +173,13 @@
               srcset=""
             />
           </div>
+        </div>
+        <div class="container">
+          <img
+            src="./assets/images/middle-logo.png"
+            style="width: 600px; margin: 50px auto"
+            alt="writeGPT"
+          />
         </div>
       </center>
 
@@ -229,29 +256,69 @@
         </div>
       </section>
       <!-- About Us Video End -->
-      <div class="flex">
-        <img src="./assets//images/mobile.png" alt="" srcset="" />
-        <div>
-          <h3 class="video-description-title">
-            Break unproductive<br />
-            browsing habits
-          </h3>
+      <div id="mobile-conatiner-bg">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <img src="./assets/images/mobile_only.png" alt="" srcset="" />
+            </div>
+            <!-- <img src="./assets//images/mobile.png" alt="" srcset="" /> -->
+            <div class="col-12 col-md-6">
+              <h3 class="video-description-title">
+                Break unproductive<br />
+                browsing habits
+              </h3>
 
-          <p>
-            Bridge your needs, context, goals, product, audience, style (and
-            many more) with the power of writeGPT.
-          </p>
-          <p>
-            We're here to streamline the whole browsing experience with no
-            strings attached.
-          </p>
+              <p>
+                Bridge your needs, context, goals, product, audience, style (and
+                many more) with the power of writeGPT.
+              </p>
+              <p>
+                We're here to streamline the whole browsing experience with no
+                strings attached.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="buttons-container">
-        <button class="btn-lg">Add to Chrome</button>
-        <button class="btn-lg outlined">Try it out</button>
-      </div>
 
+      <div
+        class="buttons-container d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center"
+      >
+        <button class="btn-lg" onclick="openChromeExtension()">
+          Add to Chrome
+        </button>
+        <button class="btn-lg outlined" onclick="openTryOut()">
+          Try it out
+        </button>
+      </div>
+      <div class="container">
+        <center><h1 class="video-description-title">FAQS</h1></center>
+        <div class="border-linear-gradient faq-wrapper">
+          <div type="button" class="collapsible">
+            Open Section 1 <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div type="button" class="collapsible">
+            Open Section 2 <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
       <footer class="d-flex flex-column flex-md-row justify-content-between">
         <div>
           <a href="https://writegpt.ai/">

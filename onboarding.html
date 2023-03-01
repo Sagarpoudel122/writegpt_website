@@ -40,35 +40,57 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="./assets/css/nav.css" />
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inter"
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,700"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lato"
+      href="https://fonts.googleapis.com/css?family=Space Grotesk:400,600,700"
     />
     <title>writeGPT - OpenAI's GPT prompt assistant</title>
   </head>
   <body>
     <div id="header-color"></div>
+
     <div id="header-spacing"></div>
 
     <section id="content">
+      <div style="width: 1500px">
+        <div id="header-man-with-pc" class="d-none d-md-block"></div>
+      </div>
+      <div id="header-middle-color" class="d-block"></div>
+
+      <!-- <img src="./assets/images/onboarding-header.png" alt="" srcset="" /> -->
+
       <!-- Navbar Start -->
       <nav class="header-nav">
         <div>
-          <a href="https://writegpt.ai/">
+          <a
+            href="javascript:void(0)"
+            class="d-block d-md-none"
+            onclick="openNav()"
+          >
+            <div class="hambuger open">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
+          </a>
+          <a href="https://writegpt.ai/" class="d-none d-md-block">
             <img src="./assets/images/logo.png" alt="Logo" class="logo" />
           </a>
         </div>
 
-        <div class="nav-wrapper">
+        <div class="nav-wrapper d-none d-md-block">
           <ul class="navbar">
             <li><a href="https://writegpt.ai/">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
-            <!-- <li><a href="">Blog</a></li> -->
+            <li><a href="">Blog</a></li>
           </ul>
         </div>
         <a href="https://www.producthunt.com/posts/writegpt" target="_blank"
@@ -78,171 +100,212 @@
             style="width: 210px; height: 54px"
         /></a>
       </nav>
-      <!-- Navbar End -->
-      <center>
-        <div class="header-text-wrapper">
-          <h2>
-            How does <br />
-            WriteGPT work?
-          </h2>
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <div class="hambuger closebtn">
+          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
         </div>
-      </center>
+
+        <!-- Overlay content -->
+        <div class="overlay-content flex justify-content-between flex-column">
+          <ul class="navbar-nav">
+            <li><a href="https://writegpt.ai/">Product</a></li>
+            <li><a href="./onboarding.html">OnBoarding</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+          <div class="social-icon-wrapper flex">
+            <a target="_blank" href="https://www.instagram.com/writegpt.ai/"
+              ><img src="./assets/images/instagram.png"
+            /></a>
+            <a target="_blank" href="https://twitter.com/write_GPT"
+              ><img src="./assets/images/twitter.png"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/writegptai/"
+              ><img src="./assets/images/linkedIn.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar End -->
+
+      <div style="max-width: 1100px; margin: auto">
+        <div class="header-text-wrapper-onboarding">
+          <h2>How does WriteGPT work?</h2>
+        </div>
+      </div>
 
       <!-- About Us Video Start -->
-      <section id="onboarding-timeline-section">
-        <div class="timeline-1">
-          <!--  -->
-          <!-- Refresh your Tabs (Start) -->
-          <!--  -->
-          <div class="timeline-item">
-            <h2>
-              Refresh all your open tabs <br />
-              before using WriteGPT on them
-            </h2>
+      <section class="container" id="onboarding-timeline-section">
+        <div class="row">
+          <div class="col-lg-7 col-12">
+            <!--  -->
+            <!-- Refresh your Tabs (Start) -->
+            <!--  -->
+            <div class="timeline-item border-linear-gradient">
+              <h2>
+                Refresh all your open tabs <br />
+                before using WriteGPT on them
+              </h2>
 
-            <div class="keyboard-button-wrapper" style="margin-top: 30px">
-              <button class="keyboard-button command-text-class"></button>
-              <div class="keyboard-add-icon">+</div>
-              <button
-                class="keyboard-button"
-                style="width: 169px; text-align: left"
-              >
-                Shift &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </button>
-              <div class="keyboard-add-icon">+</div>
-              <button class="keyboard-button">R</button>
-            </div>
+              <div class="keyboard-button-wrapper" style="margin-top: 30px">
+                <div
+                  class="keyboard-button command-text-class border-linear-gradient"
+                ></div>
+                <div class="keyboard-add-icon">+</div>
+                <div
+                  class="keyboard-button border-linear-gradient"
+                  style="text-align: left"
+                >
+                  Shift
+                </div>
+                <div class="keyboard-add-icon">+</div>
+                <div class="keyboard-button border-linear-gradient">R</div>
+              </div>
 
-            <p class="keyboard-button-description">
-              Ctrl + R in Windows <br />
-              Command + R on MacOs
-            </p>
-          </div>
-          <!--  -->
-          <!-- Refresh your tabs (End) -->
-          <!--  -->
-
-          <!--  -->
-          <!-- Select any text(Start) -->
-          <!--  -->
-          <div class="timeline-item">
-            <h2>
-              Select any text (you can try the <br />
-              one below)
-            </h2>
-
-            <div class="timeline-item-desc-container">
-              <p>
-                John was a talented AI developer who had a big ambition to
-                create something that could change the world. He wanted to build
-                a machine that could think and either solve complex problems or
-                make decisions based on vast amounts of data. The technology he
-                needed didn't exist yet, but he was a determined developer and
-                he set out to develop what he needed from scratch.
-              </p>
-              <p>
-                John worked tirelessly and eventually, after months of hard
-                work, he had created the perfect AI. He showed it off to his
-                friends who were amazed and impressed by what he had achieved.
+              <p class="keyboard-button-description">
+                Ctrl + R in Windows <br />
+                Command + R on MacOs
               </p>
             </div>
-          </div>
-          <!--  -->
-          <!-- Select any text end(End) -->
-          <!--  -->
+            <!--  -->
+            <!-- Refresh your tabs (End) -->
+            <!--  -->
 
-          <div class="timeline-item">
-            <h2>
-              Activate the extension using the <br />
-              shortcuts
-            </h2>
+            <!--  -->
+            <!-- Select any text(Start) -->
+            <!--  -->
+            <div class="timeline-item border-linear-gradient">
+              <h2>
+                Select any text (you can try the <br />
+                one below)
+              </h2>
 
-            <div class="keyboard-button-wrapper" style="margin-top: 50px">
-              <button class="keyboard-button command-text-class"></button>
-              <div class="keyboard-add-icon">+</div>
-
-              <button
-                class="keyboard-button"
-                id="open-extention-key-second"
-              ></button>
-            </div>
-            <p
-              class="keyboard-button-description"
-              id="alternative-platform-keycombo"
-            ></p>
-          </div>
-
-          <div class="timeline-item">
-            <h2>
-              Choose one of our suggestions<br />
-              or come up with your own
-            </h2>
-            <img
-              src="./assets/images/get_desired_result.png"
-              alt=""
-              srcset=""
-            />
-          </div>
-          <div class="timeline-item">
-            <h2>
-              Under full history you will see all <br />
-              your previous prompts
-            </h2>
-            <img
-              src="./assets/images/get_desired_result.png"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </div>
-        <div class="timeline-2">
-          <div class="timeline-item timeline-wrapper-widget">
-            <div style="display: flex">
-              <div class="titleline-count border1">1</div>
-              <div class="titleline-title">
-                Refresh your <br />
-                tabs
+              <div class="timeline-item-desc-container">
+                <p>
+                  John was a talented AI developer who had a big ambition to
+                  create something that could change the world. He wanted to
+                  build a machine that could think and either solve complex
+                  problems or make decisions based on vast amounts of data. The
+                  technology he needed didn't exist yet, but he was a determined
+                  developer and he set out to develop what he needed from
+                  scratch.
+                </p>
+                <p>
+                  John worked tirelessly and eventually, after months of hard
+                  work, he had created the perfect AI. He showed it off to his
+                  friends who were amazed and impressed by what he had achieved.
+                </p>
               </div>
             </div>
-            <div class="titleline-border-line"></div>
-          </div>
-          <div class="timeline-item timeline-wrapper-widget">
-            <div style="display: flex">
-              <div class="titleline-count border2">2</div>
-              <div class="titleline-title">Select your content</div>
+            <!--  -->
+            <!-- Select any text end(End) -->
+            <!--  -->
+
+            <div class="timeline-item border-linear-gradient">
+              <h2>
+                Activate the extension using the <br />
+                shortcuts
+              </h2>
+
+              <div class="keyboard-button-wrapper" style="margin-top: 50px">
+                <div
+                  class="keyboard-button border-linear-gradient command-text-class"
+                ></div>
+                <div class="keyboard-add-icon">+</div>
+
+                <div
+                  class="keyboard-button border-linear-gradient"
+                  id="open-extention-key-second"
+                ></div>
+              </div>
+              <p
+                class="keyboard-button-description"
+                id="alternative-platform-keycombo"
+              ></p>
             </div>
-            <div class="titleline-border-line"></div>
-          </div>
-          <div class="timeline-item timeline-wrapper-widget">
-            <div style="display: flex">
-              <div class="titleline-count border3">3</div>
-              <div class="titleline-title">Activate the <br />extension</div>
+
+            <div class="timeline-item border-linear-gradient">
+              <h2>
+                Choose one of our suggestions<br />
+                or come up with your own
+              </h2>
+              <img
+                src="./assets/images/get_desired_result.png"
+                alt=""
+                srcset=""
+              />
             </div>
-            <div class="titleline-border-line"></div>
-          </div>
-          <div class="timeline-item timeline-wrapper-widget">
-            <div style="display: flex">
-              <div class="titleline-count border1">4</div>
-              <div class="titleline-title">Give the desired <br />command</div>
+            <div class="timeline-item border-linear-gradient">
+              <h2>
+                Under full history you will see all <br />
+                your previous prompts
+              </h2>
+              <img
+                src="./assets/images/get_desired_result.png"
+                alt=""
+                srcset=""
+              />
             </div>
-            <div class="titleline-border-line"></div>
           </div>
-          <div class="timeline-item timeline-wrapper-widget">
-            <div style="display: flex">
-              <div class="titleline-count border4">5</div>
-              <div class="titleline-title">Check out history</div>
+          <div class="timeline-2 col-lg-5 d-none d-lg-block">
+            <div class="timeline-item timeline-wrapper-widget">
+              <div style="display: flex">
+                <div class="titleline-count border1">1</div>
+                <div class="titleline-title">
+                  Refresh your <br />
+                  tabs
+                </div>
+              </div>
+              <div class="titleline-border-line"></div>
+            </div>
+            <div class="timeline-item timeline-wrapper-widget">
+              <div style="display: flex">
+                <div class="titleline-count border1">2</div>
+                <div class="titleline-title">Select your content</div>
+              </div>
+              <div class="titleline-border-line"></div>
+            </div>
+            <div class="timeline-item timeline-wrapper-widget">
+              <div style="display: flex">
+                <div class="titleline-count border1">3</div>
+                <div class="titleline-title">Activate the <br />extension</div>
+              </div>
+              <div class="titleline-border-line"></div>
+            </div>
+            <div class="timeline-item timeline-wrapper-widget">
+              <div style="display: flex">
+                <div class="titleline-count border1">4</div>
+                <div class="titleline-title">
+                  Give the desired <br />command
+                </div>
+              </div>
+              <div class="titleline-border-line"></div>
+            </div>
+            <div class="timeline-item timeline-wrapper-widget">
+              <div style="display: flex">
+                <div class="titleline-count border1">5</div>
+                <div class="titleline-title">Check out history</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- About Us Video End -->
 
-      <!-- <div class="buttons-container">
-        <button class="btn-lg">Sign up for new updates</button>
-        <button class="btn-lg outlined">Request a feature</button>
-      </div> -->
+      <div
+        class="buttons-container d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center"
+      >
+        <button class="btn-lg" onclick="openChromeExtension()">
+          Add to Chrome
+        </button>
+        <button class="btn-lg outlined" onclick="openWatchOnYoutube()">
+          Watch on Youtube
+        </button>
+      </div>
 
-      <footer>
+      <footer class="d-flex flex-column flex-md-row justify-content-between">
         <div>
           <a href="https://writegpt.ai/">
             <img
@@ -254,7 +317,7 @@
           </a>
         </div>
 
-        <div class="flex justify-content-space-evenly" style="width: 600px">
+        <div class="d-flex flex-column flex-md-row">
           <a
             target="_blank"
             href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=writegpt@gmail.com"
@@ -298,7 +361,7 @@
       if (window.navigator.userAgentData.platform.indexOf("macOS") == 0) {
         isMac = true;
       }
-
+      console.log(window.navigator.userAgentData.platform);
       if (isMac) {
         openExtentionKeySecond = "E";
         modifierKeyPrefix = "⌘";
