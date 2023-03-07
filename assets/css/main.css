@@ -92,14 +92,22 @@ footer {
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100% 1300px;
+  top: 0;
 }
 #header-man-with-pc {
   position: absolute;
-  background: url("../images/onboarding-header.png") no-repeat center center;
+  background: url("../images/onboarding-header.png") no-repeat center right;
   height: 700px;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: 1200px 700px;
+  background-size: auto;
+}
+#header-lady-with-pc{
+  position: absolute;
+  background: url("../images/lady.png") no-repeat center center;
+  height: 700px;
+  width: 100%;
+  background-size: auto;
+  
 }
 nav.header-nav {
   display: flex;
@@ -141,7 +149,7 @@ ul.navbar {
   justify-content: space-between;
 }
 
-ul.navbar li a.active{
+ul.navbar li a.active {
   opacity: 1;
 }
 ul.navbar li a {
@@ -156,6 +164,7 @@ ul.navbar li a {
 section#content {
   position: absolute;
   top: 0px;
+  padding-top: 64px;
   width: 100%;
   left: 0;
   right: 0;
@@ -174,9 +183,16 @@ section#content {
   font-family: "Space Grotesk";
   max-width: 500px;
   z-index: 99;
-  font-size: 3rem;
-  margin: 150px auto 0px;
+  margin: 80px auto 0px;
   text-align: center;
+}
+.header-text-wrapper-onboarding h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.header-text-wrapper-onboarding p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .header-text-wrapper > img:first {
   height: 100px;
@@ -266,10 +282,10 @@ section#aboutus-video-section > div {
   padding-top: 100px;
   margin-top: -100px;
 }
-#mobile-conatiner-bg p{
+#mobile-conatiner-bg p {
   font-size: 1.1rem;
   font-weight: 500;
-  font-family: 'Inter';
+  font-family: "Inter";
   margin-bottom: 1.5rem;
 }
 
@@ -288,14 +304,14 @@ section#aboutus-video-section > div {
   text-align: left;
   outline: none;
   font-size: 1.1rem;
-  border-radius:  10px;
+  border-radius: 10px;
   margin-bottom: 10px;
   font-family: "Space Grotesk";
   display: flex;
   justify-content: space-between;
 }
 
-.collapsible i{
+.collapsible i {
   transition: all 2s;
 }
 
@@ -311,7 +327,7 @@ section#aboutus-video-section > div {
   background-color: #2f293f;
   margin-top: -22px;
   margin-bottom: 20px;
-  border-radius: 0px  0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
   font-size: 1rem;
   font-family: "Lato";
 }
@@ -332,7 +348,7 @@ section#aboutus-video-section > div {
 }
 /* Onboarding */
 #onboarding-timeline-section {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 .header-text-wrapper h2 {
   font-size: 64px;
@@ -393,7 +409,7 @@ section#aboutus-video-section > div {
   width: 90%;
   margin: 60px auto 20px;
 }
-.keyboard-button-description p img{
+.keyboard-button-description p img {
   height: 35px;
   width: 35px;
 }
@@ -537,11 +553,20 @@ footer img {
   .header-text-wrapper-onboarding {
     position: relative;
     font-family: "Space Grotesk";
-    max-width: 500px;
+    max-width: 750px;
     z-index: 99;
-    font-size: 3.5rem;
-    margin: 230px 20px;
+    margin: 120px 20px 230px;
     text-align: left;
+  }
+
+  .header-text-wrapper-onboarding h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .header-text-wrapper-onboarding p {
+    font-size: 1.625rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
   }
   #mobile-conatiner-bg {
     background: url("../images/mobile_bg.png") no-repeat top left;
@@ -572,7 +597,7 @@ footer img {
     font-weight: 700;
     text-align: center;
   }
-  .keyboard-button-description p img{
+  .keyboard-button-description p img {
     height: 40px;
     width: 40px;
   }
@@ -590,6 +615,11 @@ footer img {
   }
 }
 
-.keyboard-button::before,.faq-wrapper::before {
+.keyboard-button::before,
+.faq-wrapper::before {
   padding: 2px;
+}
+
+.max-width-header-lady-content{
+  max-width: 450px !important;
 }
