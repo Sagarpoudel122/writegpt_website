@@ -10,14 +10,13 @@
       property="og:site_name"
       content="writeGPT - OpenAI's GPT prompt assistant"
     />
-    <meta property="og:url" content="https://writegpt.ai/" />
+    <meta property="og:url" content="./index.html" />
     <meta
       property="og:description"
       content="The web extension designed to facilitate effective prompt writing, to enhance your browsing efficiency and help you optimise content creation & consumption. "
     />
     <meta property="og:type" content="product" />
-    <meta property="og:image"
-    content=https://writegpt.ai/assets/images/logo.png>
+    <meta property="og:image" content=./index.htmlassets/images/logo.png>
     <!-- OG tags End -->
 
     <meta charset="UTF-8" />
@@ -81,14 +80,14 @@
             </div>
             <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
           </a>
-          <a href="https://writegpt.ai/" class="d-none d-md-block">
+          <a href="./index.html" class="d-none d-md-block">
             <img src="./assets/images/logo.png" alt="Logo" class="logo" />
           </a>
         </div>
 
         <div class="nav-wrapper d-none d-md-block">
           <ul class="navbar">
-            <li><a href="https://writegpt.ai/">Product</a></li>
+            <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
             <li><a href="">Blog</a></li>
           </ul>
@@ -109,7 +108,7 @@
         <!-- Overlay content -->
         <div class="overlay-content flex justify-content-between flex-column">
           <ul class="navbar-nav">
-            <li><a href="https://writegpt.ai/">Product</a></li>
+            <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
             <li><a href="">Blog</a></li>
           </ul>
@@ -139,7 +138,7 @@
       <!-- About Us Video Start -->
       <section class="container" id="onboarding-timeline-section">
         <div class="row">
-          <div class="col-lg-7 col-12">
+          <div class="col-md-7 col-lg-8 col-12">
             <!--  -->
             <!-- Refresh your Tabs (Start) -->
             <!--  -->
@@ -164,10 +163,16 @@
                 <div class="keyboard-button border-linear-gradient">R</div>
               </div>
 
-              <p class="keyboard-button-description">
-                Ctrl + R in Windows <br />
-                Command + R on MacOs
-              </p>
+              <div class="keyboard-button-description">
+                <p>
+                  <img src="./assets/images/windows.png" alt="" srcset="" />
+                  Ctrl + R in Windows
+                </p>
+                <p>
+                  <img src="./assets/images/mac.png" alt="" srcset="" />
+                  Command + R on MacOs
+                </p>
+              </div>
             </div>
             <!--  -->
             <!-- Refresh your tabs (End) -->
@@ -220,10 +225,9 @@
                   id="open-extention-key-second"
                 ></div>
               </div>
-              <p
-                class="keyboard-button-description"
-                id="alternative-platform-keycombo"
-              ></p>
+              <div class="keyboard-button-description">
+                <p id="alternative-platform-keycombo"></p>
+              </div>
             </div>
 
             <div class="timeline-item border-linear-gradient">
@@ -249,7 +253,7 @@
               />
             </div>
           </div>
-          <div class="timeline-2 col-lg-5 d-none d-lg-block">
+          <div class="timeline-2 col-md-5 col-lg-4 d-none d-md-block">
             <div class="timeline-item timeline-wrapper-widget">
               <div style="display: flex">
                 <div class="titleline-count border1">1</div>
@@ -307,7 +311,7 @@
 
       <footer class="d-flex flex-column flex-md-row justify-content-between">
         <div>
-          <a href="https://writegpt.ai/">
+          <a href="./index.html">
             <img
               src="./assets/images/logo_full.png"
               height="100px"
@@ -365,13 +369,15 @@
       if (isMac) {
         openExtentionKeySecond = "E";
         modifierKeyPrefix = "⌘";
-        alternativePlatformleycombo = "Ctrl + Y in Windows";
+        alternativePlatformleycombo =
+          "<img src='./assets/images/windows.png'> Ctrl + Y in Windows";
       } else {
         openExtentionKeySecond = "Y";
         modifierKeyPrefix = "Ctrl";
-        alternativePlatformleycombo = "⌘ + E in Mac";
+        alternativePlatformleycombo =
+          "<img src='./assets/images/mac.png'> Command + E in Mac";
       }
-      document.getElementById("alternative-platform-keycombo").textContent =
+      document.getElementById("alternative-platform-keycombo").innerHTML =
         alternativePlatformleycombo;
       document.getElementById("open-extention-key-second").textContent =
         openExtentionKeySecond;

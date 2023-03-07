@@ -141,9 +141,12 @@ ul.navbar {
   justify-content: space-between;
 }
 
+ul.navbar li a.active{
+  opacity: 1;
+}
 ul.navbar li a {
   color: var(--textPrimary);
-
+  opacity: 0.5;
   text-decoration: none;
   font-size: 17px;
   font-weight: 700;
@@ -216,7 +219,7 @@ section#aboutus-video-section > div {
   font-size: 2.5rem;
   font-weight: 700;
   font-family: "Space Grotesk";
-  margin-bottom: 30px;
+  margin-bottom: 1.9rem;
 }
 
 .aboutus-video-description ul li {
@@ -258,10 +261,16 @@ section#aboutus-video-section > div {
 
 #mobile-conatiner-bg {
   background: url("../images/mobile_bg.png") no-repeat top left;
-  background-size: 100vw 800px;
-  min-height: 800px;
+  background-size: 100vw 600px;
+  min-height: 600px;
   padding-top: 100px;
   margin-top: -100px;
+}
+#mobile-conatiner-bg p{
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Inter';
+  margin-bottom: 1.5rem;
 }
 
 /* Collapsible */
@@ -279,11 +288,15 @@ section#aboutus-video-section > div {
   text-align: left;
   outline: none;
   font-size: 1.1rem;
-  border-radius: 10px;
+  border-radius:  10px;
   margin-bottom: 10px;
   font-family: "Space Grotesk";
   display: flex;
   justify-content: space-between;
+}
+
+.collapsible i{
+  transition: all 2s;
 }
 
 .active,
@@ -298,16 +311,12 @@ section#aboutus-video-section > div {
   background-color: #2f293f;
   margin-top: -22px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 0px  0px 10px 10px;
   font-size: 1rem;
   font-family: "Lato";
 }
 .border-linear-gradient {
-  /* border-image: linear-gradient(to bottom right,#f56e6a, #946dff,#259fd3) 1% stretch !important; */
-  /* border-image: linear-gradient(90deg, rgba(245,110,106,1) 0%, rgba(148,109,255,1) 35%, rgba(37,159,211,1) 100%) !impo; */
-  /* border: 3px solid; */
   position: relative;
-  /* box-shadow: 0 3px 9px black, inset 0 0 9px white; */
 }
 .border-linear-gradient::before {
   content: "";
@@ -377,12 +386,16 @@ section#aboutus-video-section > div {
   font-weight: 400;
 }
 .keyboard-button-description {
-  font-size: 26px;
+  font-size: 1.5rem;
   font-family: "Inter";
   font-weight: 400;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 60px;
+  text-align: left;
+  width: 90%;
+  margin: 60px auto 20px;
+}
+.keyboard-button-description p img{
+  height: 35px;
+  width: 35px;
 }
 .timeline-item-desc-container {
   border-radius: 20px;
@@ -480,7 +493,7 @@ section#aboutus-video-section > div {
   max-width: 680px;
   margin: 50px auto 100px;
   position: relative;
-  z-index: 99;
+  z-index: 1;
 }
 .buttons-container button {
   margin: 10px;
@@ -558,6 +571,10 @@ footer img {
     font-family: "Inter";
     font-weight: 700;
     text-align: center;
+  }
+  .keyboard-button-description p img{
+    height: 40px;
+    width: 40px;
   }
 }
 
