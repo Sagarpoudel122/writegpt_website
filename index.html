@@ -102,7 +102,7 @@
             <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
           </a>
           <a href="./index.html" class="d-none d-md-block">
-            <img src="./assets/images/logo.png" alt="Logo" class="logo" />
+            <img src="./assets/images/logo_full.png" alt="Logo" class="logo" />
           </a>
         </div>
 
@@ -110,7 +110,7 @@
           <ul class="navbar">
             <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
-            <li><a href="">Blog</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
           </ul>
         </div>
         <a href="https://www.producthunt.com/posts/writegpt" target="_blank"
@@ -131,7 +131,7 @@
           <ul class="navbar-nav">
             <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
-            <li><a href="">Blog</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
           </ul>
           <div class="social-icon-wrapper flex">
             <a target="_blank" href="https://www.instagram.com/writegpt.ai/"
@@ -150,6 +150,23 @@
       </div>
       <!-- Navbar End -->
 
+      <div class="container" style="z-index: 1; position: relative">
+        <div class="yt_link" style="margin: 50px auto; max-width: 700px">
+          <iframe
+            width="100%"
+            height="365"
+            style="
+              box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.75);
+              border-radius: 20px;
+            "
+            src="https://www.youtube.com/embed/zJyVKY4jY88?controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
       <!-- About Us Video Start -->
       <section class="container" id="aboutus-video-section">
         <div class="row">
@@ -168,18 +185,14 @@
           </div>
           <div class="col-12 col-md-6">
             <div class="video-play">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.25.04.png?alt=media&token=12cf8f2e-ff1c-41e6-a55c-eec886522465"
-              />
+              <img src="./assets/images/gif/gif-1.gif" />
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="video-play">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.26.07.png?alt=media&token=69ec05d2-6232-4aa0-b80b-c9e59714674c"
-              />
+              <img src="./assets/images/gif/gif-2.gif" />
             </div>
           </div>
           <div class="col-12 col-md-6 aboutus-video-description">
@@ -215,13 +228,12 @@
 
           <div class="col-12 col-md-6">
             <div class="video-play">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/writegpt-9cc05.appspot.com/o/Screenshot%202023-02-19%20at%2015.27.30.png?alt=media&token=74f70274-585b-4720-b66a-204536233eb0"
-              />
+              <img src="./assets/images/gif/gif-3.gif" />
             </div>
           </div>
         </div>
       </section>
+
       <!-- About Us Video End -->
       <div id="mobile-conatiner-bg">
         <div class="container">
@@ -231,18 +243,15 @@
             </div>
             <!-- <img src="./assets//images/mobile.png" alt="" srcset="" /> -->
             <div class="col-12 col-md-6">
-              <h3 class="video-description-title">
-                Break unproductive<br />
-                browsing habits
-              </h3>
+              <h3 class="video-description-title">Available on mobile, too.</h3>
 
               <p>
-                Bridge your needs, context, goals, product, audience, style (and
-                many more) with the power of writeGPT.
+                Now you can use the mobile version of writeGPT accessible from
+                any browser.
               </p>
               <p>
-                We're here to streamline the whole browsing experience with no
-                strings attached.
+                All you have to do is just to access the website from mobile and
+                the rest will happen like magic.
               </p>
             </div>
           </div>
@@ -407,8 +416,29 @@
           /></a>
         </div>
       </footer>
+      <div class="d-block d-md-none floating-banner border-linear-gradient">
+        <a href="https://app.writegpt.ai/">
+          <div class="flex align-items-center justify-content-between">
+            <div><p>Try our mobile version of writeGPT</p></div>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
     </section>
   </body>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-99E70NWK25"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-99E70NWK25");
+  </script>
   <script src="./assets/js/main.js"></script>
 </html>
 

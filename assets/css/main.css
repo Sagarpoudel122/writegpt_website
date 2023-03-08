@@ -56,9 +56,7 @@ p {
 .m-auto {
   margin: auto;
 }
-.align-items-center {
-  align-items: center !important;
-}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -101,13 +99,12 @@ footer {
   width: 100%;
   background-size: auto;
 }
-#header-lady-with-pc{
+#header-lady-with-pc {
   position: absolute;
-  background: url("../images/lady.png") no-repeat center center;
+  background: url("../images/lady.png") no-repeat 60% center;
   height: 700px;
   width: 100%;
-  background-size: auto;
-  
+  background-size: 65%;
 }
 nav.header-nav {
   display: flex;
@@ -123,16 +120,14 @@ nav.header-nav {
 }
 
 nav.header-nav > div {
-  width: 110px;
+  width: 190px;
+  margin-right: 20px;
 }
 #header-spacing {
   height: 65px;
 }
 
 nav.header-nav img {
-  height: 45px;
-  width: 45px;
-  margin-left: 0px 20px;
 }
 
 .nav-wrapper {
@@ -145,7 +140,8 @@ nav.header-nav img {
 ul.navbar {
   display: flex;
   list-style: none;
-  width: 300px;
+  width: 240px;
+  margin-left: 50px;
   justify-content: space-between;
 }
 
@@ -229,7 +225,7 @@ section#aboutus-video-section {
   background-color: transparent;
 }
 section#aboutus-video-section > div {
-  margin: 3.125rem 0px;
+  margin: 5.125rem 0px;
 }
 .video-description-title {
   font-size: 2.5rem;
@@ -253,7 +249,7 @@ section#aboutus-video-section > div {
   margin: 90px 0px;
 }
 .aboutus-video-description {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .aboutus-video-description p {
   font-size: 1.125rem;
@@ -315,10 +311,7 @@ section#aboutus-video-section > div {
   transition: all 2s;
 }
 
-.active,
-.collapsible:hover {
-  background-color: #2f293f;
-}
+
 
 .content {
   padding: 14px 18px 5px;
@@ -429,7 +422,7 @@ section#aboutus-video-section > div {
 }
 
 .timeline-item img {
-  width: 520px;
+  height: 350px;
   margin: auto;
 }
 
@@ -519,10 +512,12 @@ footer {
   align-items: center;
   font-family: "Space Grotesk";
   padding-top: 30px;
+  margin-bottom: 100px;
 }
 footer img {
   height: 50px;
 }
+
 
 /* Responsive */
 
@@ -538,6 +533,9 @@ footer img {
   nav,
   footer {
     padding: 0px 2rem;
+  }
+  footer{
+    margin-bottom: 0px;
   }
 }
 
@@ -567,6 +565,10 @@ footer img {
     font-size: 1.625rem;
     margin-bottom: 2rem;
     max-width: 600px;
+  }
+
+  section#aboutus-video-section > div {
+    margin: 10.125rem 0px;
   }
   #mobile-conatiner-bg {
     background: url("../images/mobile_bg.png") no-repeat top left;
@@ -620,6 +622,32 @@ footer img {
   padding: 2px;
 }
 
-.max-width-header-lady-content{
+.max-width-header-lady-content {
   max-width: 450px !important;
+}
+
+.floating-banner {
+  position: fixed;
+  height: 80px;
+  width: 320px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--bodyBgColor);
+  z-index: 99999;
+  border-radius: 20px;
+  padding: 12px 22px;
+  font-family: "Space Grotesk";
+  font-size: 19px;
+  font-weight: 700;
+}
+.floating-banner p,
+i,a {
+  margin-bottom: 0;
+  color: white;
+  text-decoration: none;
+}
+.floating-banner::before {
+  padding: 2px;
 }

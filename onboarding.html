@@ -76,7 +76,7 @@
             <!-- <img src="./assets/images/hamburger.png" alt="" srcset="" /> -->
           </a>
           <a href="./index.html" class="d-none d-md-block">
-            <img src="./assets/images/logo.png" alt="Logo" class="logo" />
+            <img src="./assets/images/logo_full.png" alt="Logo" class="logo" />
           </a>
         </div>
 
@@ -84,7 +84,7 @@
           <ul class="navbar">
             <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
-            <li><a href="">Blog</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
           </ul>
         </div>
         <a href="https://www.producthunt.com/posts/writegpt" target="_blank"
@@ -105,7 +105,7 @@
           <ul class="navbar-nav">
             <li><a href="./index.html">Product</a></li>
             <li><a href="./onboarding.html">OnBoarding</a></li>
-            <li><a href="">Blog</a></li>
+            <!-- <li><a href="">Blog</a></li> -->
           </ul>
           <div class="social-icon-wrapper flex">
             <a target="_blank" href="https://www.instagram.com/writegpt.ai/"
@@ -122,40 +122,34 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Navbar End -->
 
+      <div
+        id="header-lady-with-pc"
+        style="z-index: 1"
+        class="d-none d-md-block"
+      ></div>
+      <div id="header-middle-color" class="d-none d-md-block"></div>
 
-      <div id="header-lady-with-pc" class="d-none d-md-block"></div>
-      <div id="header-middle-color" style="opacity: 0.85;" class="d-block"></div>
+      <div
+        id="header-middle-color"
+        style="opacity: 0.4; z-index: 2"
+        class="d-block"
+      ></div>
       <div style="max-width: 1100px; margin: auto">
-        <div class="header-text-wrapper-onboarding max-width-header-lady-content">
+        <div
+          class="header-text-wrapper-onboarding max-width-header-lady-content"
+        >
           <h2>How does writeGPT works</h2>
-          <br/> <br/> <br/> <br/>
-          <br/>
-         
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
-      <!-- <div>
-        <div style="max-width: 850px; margin: auto; padding: 5px 20px">
-          <img
-            class="lady-img"
-            src="./assets/images/lady.png"
-            alt=""
-            srcset=""
-          />
-        </div>
-      </div>
-      <div style="max-width: 1200px; margin: auto">
-        <div class="header-text-wrapper-onboarding">
-          <h2>Your chatGPT Prompt Assistant on all websites</h2>
-          <p>
-            The multi-function web extension harnessing Chat GPT on any website
-            while facilitating effective prompt engineering for content creation
-            & consumption.
-          </p>
-        </div> -->
-      </div>
+
       <!-- About Us Video Start -->
       <section class="container" id="onboarding-timeline-section">
         <div class="row">
@@ -267,11 +261,7 @@
                 Under full history you will see all <br />
                 your previous prompts
               </h2>
-              <img
-                src="./assets/images/get_desired_result.png"
-                alt=""
-                srcset=""
-              />
+              <img src="./assets/images/see_history.png" alt="" srcset="" />
             </div>
           </div>
           <div class="timeline-2 col-md-5 col-lg-4 d-none d-md-block">
@@ -325,9 +315,9 @@
         <button class="btn-lg" onclick="openChromeExtension()">
           Add to Chrome
         </button>
-        <button class="btn-lg outlined" onclick="openWatchOnYoutube()">
+        <!-- <button class="btn-lg outlined" onclick="openWatchOnYoutube()">
           Watch on Youtube
-        </button>
+        </button> -->
       </div>
 
       <footer class="d-flex flex-column flex-md-row justify-content-between">
@@ -374,6 +364,14 @@
           /></a>
         </div>
       </footer>
+      <div class="d-block d-md-none floating-banner border-linear-gradient">
+        <a href="https://app.writegpt.ai/">
+          <div class="flex align-items-center justify-content-between">
+            <div><p>Try our mobile version of writeGPT</p></div>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
     </section>
   </body>
   <script src="./assets/js/main.js"></script>
@@ -409,5 +407,18 @@
     }
 
     setIcon();
+  </script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-99E70NWK25"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-99E70NWK25");
   </script>
 </html>
