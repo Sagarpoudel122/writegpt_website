@@ -1,0 +1,653 @@
+:root {
+  --appPrimary: rgba(244, 167, 51, 1);
+  --white: #ffffff;
+  --textPrimary: #ffffff;
+  --navbarBorderBottom: rgba(72, 65, 91, 0.7);
+  --aboutus-video-with: 1150px;
+  --onboarding-timeline-border: rgba(171, 171, 171, 0.8);
+  --timeline-1-with: 778px;
+  --bodyBgColor: rgba(12, 1, 43, 1);
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--appPrimary);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bodyBgColor);
+  color: var(--textPrimary);
+  font-size: 14.5px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* HelveticaNeue */
+
+p {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.flex {
+  display: flex;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.m-auto {
+  margin: auto;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+}
+#header-color {
+  background-image: url("../images/colored_bg.png");
+  height: var(--aboutus-video-with);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% var(--aboutus-video-with);
+}
+nav,
+footer {
+  padding: 0px 1rem;
+  max-width: 1920px;
+  margin: auto;
+  z-index: 99;
+}
+#header-middle-color {
+  position: absolute;
+  background-image: url("../images/center_bg.png");
+  height: 1300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1300px;
+  top: 0;
+}
+#header-man-with-pc {
+  position: absolute;
+  background: url("../images/onboarding-header.png") no-repeat center right;
+  height: 700px;
+  width: 100%;
+  background-size: auto;
+}
+#header-lady-with-pc {
+  position: absolute;
+  background: url("../images/lady.png") no-repeat 60% center;
+  height: 700px;
+  width: 100%;
+  background-size: 65%;
+}
+nav.header-nav {
+  display: flex;
+  border-bottom: 1px solid var(--navbarBorderBottom);
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(12px);
+}
+
+nav.header-nav > div {
+  width: 190px;
+  margin-right: 20px;
+}
+#header-spacing {
+  height: 65px;
+}
+
+nav.header-nav img {
+}
+
+.nav-wrapper {
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  padding: 0px 20px;
+}
+ul.navbar {
+  display: flex;
+  list-style: none;
+  width: 240px;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+ul.navbar li a.active {
+  opacity: 1;
+}
+ul.navbar li a {
+  color: var(--textPrimary);
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Space Grotesk";
+}
+
+section#content {
+  position: absolute;
+  top: 0px;
+  padding-top: 64px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1520px;
+}
+
+.header-text-wrapper {
+  max-width: 650px;
+  background: transparent;
+  position: relative;
+  margin: 150px auto auto;
+}
+.header-text-wrapper-onboarding {
+  position: relative;
+  font-family: "Space Grotesk";
+  max-width: 500px;
+  z-index: 99;
+  margin: 80px auto 0px;
+  text-align: center;
+}
+.header-text-wrapper-onboarding h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.header-text-wrapper-onboarding p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.header-text-wrapper > img:first {
+  height: 100px;
+  margin-bottom: 10px;
+}
+button {
+  cursor: pointer;
+  border: none;
+  /* height: 56px; */
+  border-radius: 10px;
+  /* max-width: 210px; */
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  font-family: "Space Grotesk";
+  background-color: var(--appPrimary);
+  color: black;
+}
+
+.header-description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Lato";
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+}
+.lady-img {
+  margin-top: 0px;
+}
+section#aboutus-video-section {
+  /* width: var(--aboutus-video-with); */
+  margin: auto auto;
+  position: relative;
+  background-color: transparent;
+}
+section#aboutus-video-section > div {
+  margin: 5.125rem 0px;
+}
+.video-description-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Space Grotesk";
+  margin-bottom: 1.9rem;
+}
+
+.aboutus-video-description ul li {
+  font-size: 1.15rem;
+  font-weight: 500;
+  font-family: "Inter";
+  padding-bottom: 10px;
+  margin-left: 15px;
+  padding-left: 7px;
+}
+.aboutus-video-item {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: flex-start;
+  margin: 90px 0px;
+}
+.aboutus-video-description {
+  /* padding: 1rem; */
+}
+.aboutus-video-description p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: "Inter";
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.video-play-wrapper {
+  width: calc(var(--aboutus-video-with) * 0.5);
+}
+.video-play {
+  /* background: #d9d9d9; */
+  /* height: 330px;
+  width: 500px; */
+  border-radius: 10px;
+}
+.video-play img {
+  max-width: 100%;
+}
+
+#mobile-conatiner-bg {
+  background: url("../images/mobile_bg.png") no-repeat top left;
+  background-size: 100vw 600px;
+  min-height: 600px;
+  padding-top: 100px;
+  margin-top: -100px;
+}
+#mobile-conatiner-bg p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Inter";
+  margin-bottom: 1.5rem;
+}
+
+/* Collapsible */
+.faq-wrapper {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.collapsible {
+  background-color: #2f293f;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: "Space Grotesk";
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible i {
+  transition: all 2s;
+}
+
+
+
+.content {
+  padding: 14px 18px 5px;
+  display: none;
+  overflow: hidden;
+  background-color: #2f293f;
+  margin-top: -22px;
+  margin-bottom: 20px;
+  border-radius: 0px 0px 10px 10px;
+  font-size: 1rem;
+  font-family: "Lato";
+}
+.border-linear-gradient {
+  position: relative;
+}
+.border-linear-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 4.5px; /* control the border thickness */
+  background: linear-gradient(to bottom right, #f56e6a, #946dff, #259fd3);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+/* Onboarding */
+#onboarding-timeline-section {
+  /* margin-top: 100px; */
+}
+.header-text-wrapper h2 {
+  font-size: 64px;
+  font-weight: 500;
+  font-family: "HelveticaNeue";
+}
+.timeline-2 {
+  position: relative;
+  right: 0;
+  top: 200px;
+  /* margin: 200px 0px 0px 0px; */
+}
+
+.timeline-item {
+  border-radius: 20px;
+  margin: 50px auto;
+  height: 500px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 540px;
+}
+.timeline-item h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: "Space Grotesk";
+  text-align: left;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+.keyboard-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keyboard-button {
+  padding: 1.25rem 1.25rem;
+  min-width: 85px;
+  height: 68px;
+  margin: 0px 1rem;
+  font-size: 1.5rem;
+  font-family: "Inter";
+  font-weight: 700;
+  text-align: center;
+  /* cursor: not-allowed; */
+}
+.keyboard-add-icon {
+  font-size: 28px;
+  font-weight: 400;
+}
+.keyboard-button-description {
+  font-size: 1.5rem;
+  font-family: "Inter";
+  font-weight: 400;
+  text-align: left;
+  width: 90%;
+  margin: 60px auto 20px;
+}
+.keyboard-button-description p img {
+  height: 35px;
+  width: 35px;
+}
+.timeline-item-desc-container {
+  border-radius: 20px;
+  margin: 8px 0px 10px;
+  padding: 15px;
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: 500;
+  text-align: left;
+  background: #2f293f;
+  overflow-y: scroll;
+}
+.timeline-item-desc-container p:first {
+  margin-bottom: 25px;
+}
+
+.timeline-item img {
+  height: 350px;
+  margin: auto;
+}
+
+.titleline-count {
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 2rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  font-family: "Inter";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleline-title {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Space Grotesk";
+  margin-left: 30px;
+}
+.border1 {
+  border: 2px solid rgba(14, 223, 123, 1);
+}
+.border2 {
+  border: 1px solid rgba(235, 7, 144, 1);
+}
+.border3 {
+  border: 1px solid rgba(244, 167, 51, 1);
+}
+.border4 {
+  border: 1px solid rgba(37, 159, 211, 1);
+}
+.titleline-border-line {
+  border-left: 3px dotted white;
+  height: 100%;
+  margin-left: 26px;
+  margin: 0px 0px 0px 26px;
+}
+
+.timeline-wrapper-widget {
+  border: none;
+  padding: 20px 0px;
+  /* margin: 50px auto;
+  height: 400px; */
+}
+
+.outlined {
+  border: 2px solid var(--appPrimary);
+  background: transparent;
+  color: #f4a733;
+  margin: 0px 20px;
+}
+.btn-lg {
+  width: 300px;
+}
+
+.linkText {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--appPrimary);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.social-icon-wrapper {
+  width: 200px;
+  text-align: center;
+}
+.social-icon-wrapper img {
+  height: 40px;
+  width: 40px;
+  margin: 20px 10px;
+}
+.text-white {
+  color: white !important;
+}
+.buttons-container {
+  max-width: 680px;
+  margin: 50px auto 100px;
+  position: relative;
+  z-index: 1;
+}
+.buttons-container button {
+  margin: 10px auto;
+}
+footer {
+  border-top: 2px solid var(--navbarBorderBottom);
+  align-items: center;
+  font-family: "Space Grotesk";
+  padding-top: 30px;
+  margin-bottom: 100px;
+}
+footer img {
+  height: 50px;
+}
+
+
+/* Responsive */
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* sSmall devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+  nav,
+  footer {
+    padding: 0px 2rem;
+  }
+  footer{
+    margin-bottom: 0px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+  .lady-img {
+    margin-top: -100px;
+  }
+  .header-text-wrapper-onboarding {
+    position: relative;
+    font-family: "Space Grotesk";
+    max-width: 750px;
+    z-index: 99;
+    margin: 120px 20px 230px;
+    text-align: left;
+  }
+
+  .header-text-wrapper-onboarding h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .header-text-wrapper-onboarding p {
+    font-size: 1.625rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  section#aboutus-video-section > div {
+    margin: 10.125rem 0px;
+  }
+  #mobile-conatiner-bg {
+    background: url("../images/mobile_bg.png") no-repeat top left;
+    background-size: 900px 800px;
+    min-height: 700px;
+    padding-top: 100px;
+    margin-top: -100px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html,
+  body {
+    font-size: 15.5px;
+  }
+  nav,
+  footer {
+    padding: 0px 5rem;
+  }
+  .keyboard-button {
+    padding: 1.25rem 1.5rem;
+    min-width: 94px;
+    height: 74px;
+    margin: 0px 1.5rem;
+    font-size: 1.5rem;
+    font-family: "Inter";
+    font-weight: 700;
+    text-align: center;
+  }
+  .keyboard-button-description p img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  nav,
+  footer {
+    padding: 0px 8rem;
+  }
+}
+
+.keyboard-button::before,
+.faq-wrapper::before {
+  padding: 2px;
+}
+
+.max-width-header-lady-content {
+  max-width: 450px !important;
+}
+
+.floating-banner {
+  position: fixed;
+  height: 80px;
+  width: 320px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--bodyBgColor);
+  z-index: 99999;
+  border-radius: 20px;
+  padding: 12px 22px;
+  font-family: "Space Grotesk";
+  font-size: 19px;
+  font-weight: 700;
+}
+.floating-banner p,
+i,a {
+  margin-bottom: 0;
+  color: white;
+  text-decoration: none;
+}
+.floating-banner::before {
+  padding: 2px;
+}
